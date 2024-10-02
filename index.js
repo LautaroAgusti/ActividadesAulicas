@@ -106,4 +106,22 @@ function restartGameState() {
   }
 }
 
+// Cambiar color de fondo de la página
+function changeBackgroundColor() {
+    const colors = ['green', 'skyblue', 'white'];
+    let currentColor = 0;
+  
+    // Al hacer clic en el botón, cambiar el fondo
+    document.getElementById('colorButton').addEventListener('click', function() {
+      document.body.style.backgroundColor = colors[currentColor];
+      currentColor = (currentColor + 1) % colors.length;
+    });
+  }
+  
+  // Asegurarse que el DOM esté completamente cargado antes de llamar a la función
+  document.addEventListener('DOMContentLoaded', function() {
+    changeBackgroundColor();
+  });
+  
+
 main()
