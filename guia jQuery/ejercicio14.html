@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Mousemove</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #miDiv {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+            margin: 20px;
+        }
+
+        #coordenadas {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="miDiv"></div>
+    <p id="coordenadas">El mouse no está dentro del div</p>
+
+    <script>
+
+        $("#miDiv").mousemove(function(event) {
+            var posX = event.offsetX;
+            var posY = event.offsetY;
+            $("#coordenadas").text("Coordenadas dentro del div: X=" + posX + ", Y=" + posY);
+        });
+
+
+        $("#miDiv").mouseleave(function() {
+            $("#coordenadas").text("El mouse no está dentro del div");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar tamaño de fuente de la descripción</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .descripcion {
+            font-size: 16px; 
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn1").click(function(){
+                $(".noticia1").css("font-size", "20px");
+            });
+
+            $("#btn2").click(function(){
+                $(".noticia2").css("font-size", "20px");
+            });
+
+            $("#btn3").click(function(){
+                $(".noticia3").css("font-size", "20px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Noticia 1</h2>
+    <div class="descripcion noticia1">
+        Esta es la descripción de la primera noticia.
+    </div>
+    <button id="btn1">Cambiar tamaño de la primera noticia</button>
+
+    <h2>Noticia 2</h2>
+    <div class="descripcion noticia2">
+        Esta es la descripción de la segunda noticia.
+    </div>
+    <button id="btn2">Cambiar tamaño de la segunda noticia</button>
+
+    <h2>Noticia 3</h2>
+    <div class="descripcion noticia3">
+        Esta es la descripción de la tercera noticia.
+    </div>
+    <button id="btn3">Cambiar tamaño de la tercera noticia</button>
+</body>
+</html>

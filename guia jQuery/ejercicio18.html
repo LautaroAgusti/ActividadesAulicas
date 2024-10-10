@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Blur</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form>
+        <label for="inputText">Ingrese algún texto:</label>
+        <input type="text" id="inputText">
+    </form>
+
+    <script>
+        
+        function pierdeFoco() {
+            let x = $(this); 
+            let cadena = x.val(); 
+            if (cadena.length == 0) {
+                alert("No ingresó datos");
+            }
+        }
+
+        $("#inputText").blur(pierdeFoco);
+    </script>
+
+</body>
+</html>

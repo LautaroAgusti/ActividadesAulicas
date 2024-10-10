@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar el hipervínculo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Botón 1: Fijar hipervínculo y texto a Google
+            $("#btn1").click(function(){
+                $("#miEnlace").attr("href", "https://www.google.com");
+                $("#miEnlace").text("Ir a Google");
+            });
+
+            // Botón 2: Fijar hipervínculo y texto a YouTube
+            $("#btn2").click(function(){
+                $("#miEnlace").attr("href", "https://www.youtube.com");
+                $("#miEnlace").text("Ir a YouTube");
+            });
+
+            // Botón 3: Fijar hipervínculo y texto a Wikipedia
+            $("#btn3").click(function(){
+                $("#miEnlace").attr("href", "https://www.wikipedia.org");
+                $("#miEnlace").text("Ir a Wikipedia");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Hipervínculo Dinámico</h2>
+
+    <a id="miEnlace" href="">Este es un enlace vacío</a>
+
+    <br><br>
+
+    <button id="btn1">Fijar enlace a Google</button>
+    <button id="btn2">Fijar enlace a YouTube</button>
+    <button id="btn3">Fijar enlace a Wikipedia</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Doble Clic</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #miDiv {
+            width: 800px;
+            height: 70px;
+            background-color: lightblue;
+            border: 2px solid black;
+            transition: width 0.5s, height 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="miDiv"></div>
+
+    <script>
+        let isExpanded = false;
+
+        $("#miDiv").dblclick(function() {
+            if (isExpanded) {
+                // Retornar al tamaño original
+                $(this).animate({ width: "800px", height: "70px" }, 500);
+            } else {
+                // Redimensionar a 250x250
+                $(this).animate({ width: "250px", height: "250px" }, 500);
+            }
+            isExpanded = !isExpanded;
+        });
+    </script>
+
+</body>
+</html>

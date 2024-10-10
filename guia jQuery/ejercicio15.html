@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos MouseDown y MouseUp</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            background-color: lightblue;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="boton1">Botón 1</button>
+    <button id="boton2">Botón 2</button>
+
+    <script>
+        $("button").mousedown(function() {
+            $(this).addClass("active");
+        });
+
+        $("button").mouseup(function() {
+            $(this).removeClass("active");
+        });
+    </script>
+
+</body>
+</html>

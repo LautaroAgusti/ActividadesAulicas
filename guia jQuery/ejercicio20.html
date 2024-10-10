@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos con show y hide</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #miDiv, #otroTexto {
+            width: 400px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+            background-color: lightgray;
+            display: block;
+        }
+
+        #otroTexto {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="miDiv">
+        <p>Párrafo 1 dentro del div original.</p>
+        <p>Párrafo 2 dentro del div original.</p>
+        <p>Párrafo 3 dentro del div original.</p>
+    </div>
+
+    <div id="otroTexto">
+        <p>Este es el bloque de texto que aparece después de ocultar el primer div.</p>
+    </div>
+
+    <script>
+        
+        $("#miDiv").click(function() {
+            $(this).hide("slow", function() {
+
+                $("#otroTexto").show("slow");
+            });
+        });
+    </script>
+
+</body>
+</html>

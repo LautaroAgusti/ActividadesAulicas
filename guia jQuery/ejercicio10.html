@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con método html()</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Botón para mostrar el contenido HTML de la cabecera
+            $("#btnCabecera").click(function(){
+                
+                alert($("head").html());
+            });
+
+
+            $("#btnCuerpo").click(function(){
+
+                alert($("body").html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Título de ejemplo</h1>
+    <p>Este es un párrafo de ejemplo.</p>
+
+    <!-- Botones -->
+    <button id="btnCabecera">Mostrar HTML de la cabecera</button>
+    <button id="btnCuerpo">Mostrar HTML del cuerpo</button>
+</body>
+</html>

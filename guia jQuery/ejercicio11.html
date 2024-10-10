@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar palabras con strong</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("strong").click(function(){
+
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        Esta es una <strong>palabra</strong> destacada. Aquí hay otra <strong>palabra</strong> que también está destacada.
+    </p>
+    <p>
+        Algunas palabras como <strong>importante</strong> son importantes y <strong>relevante</strong> en el contexto.
+    </p>
+</body>
+</html>

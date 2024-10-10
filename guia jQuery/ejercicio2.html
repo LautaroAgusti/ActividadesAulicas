@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de clic en jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Captura el evento click solo en el primer párrafo
+            $("p:first").click(function(){
+                alert("Hiciste clic en el primer párrafo.");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Este es el primer párrafo.</p>
+    <p>Este es el segundo párrafo.</p>
+</body>
+</html>
